@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
+import profilePhoto from "@assets/pas_foto_ai_1776398601704.png";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -26,7 +27,7 @@ export function Hero() {
       />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        {/* Top row: status + counter */}
+        {/* Top row */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,9 +45,9 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Main content: text left + photo right */}
+        {/* Main: text left + photo right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Left: typography */}
+          {/* Left */}
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
@@ -108,38 +109,22 @@ export function Hero() {
               <div className="absolute -top-3 -right-3 w-full h-full rounded-[2rem] border-2 border-gray-200 z-0" />
 
               {/* Photo container */}
-              <div className="relative z-10 w-[280px] h-[360px] md:w-[320px] md:h-[420px] rounded-[2rem] overflow-hidden bg-gray-900 shadow-2xl">
-                {/* Grayscale photo placeholder — replace src with real photo */}
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900">
-                  {/* Silhouette-like abstract shape for placeholder */}
-                  <svg
-                    viewBox="0 0 320 420"
-                    className="w-full h-full opacity-40"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <ellipse cx="160" cy="130" rx="55" ry="60" fill="#ccc" />
-                    <ellipse cx="160" cy="300" rx="90" ry="110" fill="#bbb" />
-                  </svg>
-                </div>
-
-                {/* Overlay label */}
-                <div className="absolute bottom-5 left-5 right-5">
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10">
-                    <p className="text-white text-xs font-mono tracking-widest uppercase">
-                      Your Photo Here
-                    </p>
-                    <p className="text-white/50 text-[10px] font-mono mt-0.5">
-                      Replace with your actual photo
-                    </p>
-                  </div>
-                </div>
+              <div className="relative z-10 w-[280px] h-[380px] md:w-[320px] md:h-[430px] rounded-[2rem] overflow-hidden shadow-2xl bg-gray-100">
+                <img
+                  src={profilePhoto}
+                  alt="Alex Rivera"
+                  className="w-full h-full object-cover object-top grayscale"
+                  style={{ objectPosition: "50% 15%" }}
+                />
+                {/* subtle dark gradient at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
 
               {/* Floating badge */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-6 -left-6 bg-black text-white rounded-2xl px-4 py-3 text-xs font-mono shadow-xl"
+                className="absolute -bottom-6 -left-6 bg-black text-white rounded-2xl px-4 py-3 text-xs font-mono shadow-xl z-20"
               >
                 <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">
                   Based in
@@ -150,12 +135,12 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Bottom: scroll hint */}
+        {/* Bottom scroll hint */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="mt-16 flex items-center gap-3 text-gray-300"
+          className="mt-20 flex items-center gap-3 text-gray-300"
         >
           <div className="w-8 h-px bg-gray-200" />
           <span className="text-[10px] font-mono uppercase tracking-widest">
