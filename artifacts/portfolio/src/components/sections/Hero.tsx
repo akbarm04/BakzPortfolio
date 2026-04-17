@@ -26,7 +26,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-8 md:px-16 lg:px-28 xl:px-36 relative z-10">
         {/* Top row */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
