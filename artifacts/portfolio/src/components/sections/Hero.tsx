@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { ArrowDownRight } from "lucide-react";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -11,57 +11,157 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-[100dvh] flex items-center justify-center pt-20 relative overflow-hidden">
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gray-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-      </div>
+    <section
+      id="hero"
+      className="min-h-[100dvh] flex flex-col justify-center pt-28 pb-16 relative overflow-hidden bg-white"
+    >
+      {/* Subtle background grid */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 mb-8">
-              <span className="w-2 h-2 rounded-full bg-black animate-pulse"></span>
-              <span className="text-xs font-mono uppercase tracking-wider">Available for opportunities</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-6">
-              ALEX<br />RIVERA
-            </h1>
-          </motion.div>
+        {/* Top row: status + counter */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex items-center justify-between mb-12"
+        >
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-gray-200">
+            <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
+            <span className="text-[11px] font-mono uppercase tracking-widest text-gray-600">
+              Available for opportunities
+            </span>
+          </div>
+          <span className="hidden md:block text-xs font-mono text-gray-300 tracking-widest">
+            Portfolio — 2025
+          </span>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <p className="text-xl md:text-3xl text-gray-500 max-w-2xl mb-10 font-mono">
-              Creative Developer & Designer
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="rounded-full px-8 text-base h-14 bg-black text-white hover:bg-gray-800"
+        {/* Main content: text left + photo right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          {/* Left: typography */}
+          <div>
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="text-[clamp(3.5rem,10vw,8rem)] font-bold leading-[0.88] tracking-tighter mb-8"
+            >
+              ALEX
+              <br />
+              <span className="text-gray-300">RIVERA</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="text-base md:text-lg font-mono text-gray-500 max-w-sm mb-12 leading-relaxed"
+            >
+              Creative Developer & Designer crafting digital experiences at the
+              intersection of art and technology.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <button
                 onClick={() => scrollToSection("work")}
+                data-testid="button-see-work"
+                className="group inline-flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full text-sm font-mono uppercase tracking-widest hover:bg-gray-800 active:scale-95 transition-all duration-200"
               >
                 See My Work
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="rounded-full px-8 text-base h-14 border-2"
+                <ArrowDownRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+                />
+              </button>
+              <button
                 onClick={() => scrollToSection("contact")}
+                data-testid="button-contact"
+                className="inline-flex items-center gap-3 border-2 border-black text-black px-8 py-4 rounded-full text-sm font-mono uppercase tracking-widest hover:bg-gray-50 active:scale-95 transition-all duration-200"
               >
                 Contact Me
-              </Button>
+              </button>
+            </motion.div>
+          </div>
+
+          {/* Right: photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              {/* Decorative border offset */}
+              <div className="absolute -top-3 -right-3 w-full h-full rounded-[2rem] border-2 border-gray-200 z-0" />
+
+              {/* Photo container */}
+              <div className="relative z-10 w-[280px] h-[360px] md:w-[320px] md:h-[420px] rounded-[2rem] overflow-hidden bg-gray-900 shadow-2xl">
+                {/* Grayscale photo placeholder — replace src with real photo */}
+                <div className="absolute inset-0 bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900">
+                  {/* Silhouette-like abstract shape for placeholder */}
+                  <svg
+                    viewBox="0 0 320 420"
+                    className="w-full h-full opacity-40"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <ellipse cx="160" cy="130" rx="55" ry="60" fill="#ccc" />
+                    <ellipse cx="160" cy="300" rx="90" ry="110" fill="#bbb" />
+                  </svg>
+                </div>
+
+                {/* Overlay label */}
+                <div className="absolute bottom-5 left-5 right-5">
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10">
+                    <p className="text-white text-xs font-mono tracking-widest uppercase">
+                      Your Photo Here
+                    </p>
+                    <p className="text-white/50 text-[10px] font-mono mt-0.5">
+                      Replace with your actual photo
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating badge */}
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -left-6 bg-black text-white rounded-2xl px-4 py-3 text-xs font-mono shadow-xl"
+              >
+                <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-0.5">
+                  Based in
+                </p>
+                <p className="font-bold">San Francisco</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>
+
+        {/* Bottom: scroll hint */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+          className="mt-16 flex items-center gap-3 text-gray-300"
+        >
+          <div className="w-8 h-px bg-gray-200" />
+          <span className="text-[10px] font-mono uppercase tracking-widest">
+            Scroll to explore
+          </span>
+        </motion.div>
       </div>
     </section>
   );

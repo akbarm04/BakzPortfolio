@@ -1,58 +1,116 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, MonitorPlay, Paintbrush, PenTool } from "lucide-react";
+import { Code2, MonitorPlay, Paintbrush, PenTool, Layers, Zap } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: <MonitorPlay size={32} strokeWidth={1.5} />,
+    icon: MonitorPlay,
     title: "Web Design",
-    description: "Creating digital experiences that are intuitive, engaging, and memorable. Focusing on visual hierarchy and interaction."
+    number: "01",
+    description:
+      "Creating digital experiences that are intuitive, engaging, and memorable. Focused on visual hierarchy and smooth interaction.",
   },
   {
-    icon: <Code2 size={32} strokeWidth={1.5} />,
+    icon: Code2,
     title: "Development",
-    description: "Translating designs into pixel-perfect, performant, and accessible code using modern frontend technologies."
+    number: "02",
+    description:
+      "Translating designs into pixel-perfect, performant, and accessible code using modern frontend technologies.",
   },
   {
-    icon: <Paintbrush size={32} strokeWidth={1.5} />,
+    icon: Paintbrush,
     title: "Brand Identity",
-    description: "Building cohesive visual systems that communicate your values and distinguish you from the competition."
+    number: "03",
+    description:
+      "Building cohesive visual systems that communicate your values and distinguish you from the competition.",
   },
   {
-    icon: <PenTool size={32} strokeWidth={1.5} />,
+    icon: PenTool,
     title: "UI/UX Design",
-    description: "Designing systematic interfaces and user flows that prioritize usability without sacrificing aesthetic quality."
-  }
+    number: "04",
+    description:
+      "Designing systematic interfaces and user flows that prioritize usability without sacrificing aesthetic quality.",
+  },
+  {
+    icon: Layers,
+    title: "Motion Design",
+    number: "05",
+    description:
+      "Bringing interfaces to life with purposeful motion — transitions, micro-interactions, and scroll experiences.",
+  },
+  {
+    icon: Zap,
+    title: "Creative Direction",
+    number: "06",
+    description:
+      "Shaping visual strategy and creative vision across campaigns, digital products, and brand touchpoints.",
+  },
 ];
 
 export function Services() {
   return (
     <section id="services" className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="mb-16">
-          <p className="text-sm font-mono text-gray-400 mb-4">(04) SERVICES</p>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">What I Do.</h2>
-        </div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-16"
+        >
+          <p className="text-[11px] font-mono text-gray-400 mb-4 tracking-[0.3em] uppercase">
+            (04) Services
+          </p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+            What I Do.
+          </h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {SERVICES.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="p-10 rounded-3xl border border-gray-100 hover:border-gray-300 hover:shadow-xl hover:shadow-gray-100/50 transition-all duration-300 group"
-            >
-              <div className="mb-8 p-4 bg-gray-50 rounded-2xl w-fit group-hover:bg-black group-hover:text-white transition-colors duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="text-gray-500 leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
-          ))}
+        {/* Services grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 rounded-3xl overflow-hidden border border-gray-100">
+          {SERVICES.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.07,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="group bg-white p-8 md:p-10 relative overflow-hidden hover:bg-black transition-colors duration-500 cursor-default"
+              >
+                {/* Number */}
+                <span className="absolute top-6 right-8 text-xs font-mono text-gray-200 group-hover:text-white/20 transition-colors duration-500">
+                  {service.number}
+                </span>
+
+                {/* Icon */}
+                <div className="mb-7 inline-flex p-3 rounded-2xl bg-gray-50 group-hover:bg-white/10 transition-colors duration-500">
+                  <Icon
+                    size={24}
+                    strokeWidth={1.5}
+                    className="text-black group-hover:text-white transition-colors duration-500"
+                  />
+                </div>
+
+                {/* Text */}
+                <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors duration-500">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed group-hover:text-white/60 transition-colors duration-500">
+                  {service.description}
+                </p>
+
+                {/* Bottom border reveal */}
+                <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-white group-hover:w-full transition-all duration-700 ease-out" />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

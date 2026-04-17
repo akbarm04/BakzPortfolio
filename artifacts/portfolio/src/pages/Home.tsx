@@ -5,6 +5,7 @@ import { About } from "@/components/sections/About";
 import { Work } from "@/components/sections/Work";
 import { Services } from "@/components/sections/Services";
 import { Contact } from "@/components/sections/Contact";
+import { ToolsMarquee, ClientsMarquee } from "@/components/ToolsMarquee";
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ClientsMarquee />
         <Work />
+        <ToolsMarquee label="Tools & Technologies I Use" />
         <About />
         <Services />
       </main>
