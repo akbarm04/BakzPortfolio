@@ -51,7 +51,7 @@ const EXPERIENCES = [
 export function Experience() {
   return (
     <section id="experience" className="py-24 md:py-32 bg-gray-50/50">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-8 md:px-16 lg:px-28 xl:px-36">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

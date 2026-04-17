@@ -203,7 +203,7 @@ interface ToolsMarqueeProps {
 export function ToolsMarquee({ label = "Tools & Technologies" }: ToolsMarqueeProps) {
   return (
     <section className="py-14 border-y border-gray-100 overflow-hidden bg-white">
-      <div className="container mx-auto px-6 md:px-12 mb-10">
+      <div className="container mx-auto px-8 md:px-16 lg:px-28 xl:px-36 mb-10">
         <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-gray-300">
           {label}
         </p>
@@ -230,10 +230,12 @@ const CLIENT_LOGOS: { name: string; svg: React.ReactNode }[] = [
     ),
   },
   {
-    name: "Stripe",
+    name: "AWS",
     svg: (
-      <svg viewBox="0 0 60 25" fill="currentColor" className="w-14 h-6">
-        <path d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 0 1-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.23c0-1.85-1.07-2.58-2.06-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.44.94V5.2h3.94l.18 1.06c.55-.67 1.62-1.26 3.01-1.26 2.65 0 5.15 2.41 5.15 7.44 0 5.43-2.42 7.86-4.92 7.86zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.2h4.44V20h-4.44V5.2zm0-4.43 4.44-.94V3.8l-4.44.94V.77zm-4.99 14.7c0 1.28.95 1.8 2.23 1.8.8 0 1.56-.1 2.4-.44v3.39c-.83.38-1.88.58-3.26.58-3.25 0-5.46-1.7-5.46-5.03V8.57h-1.93V5.2h1.93V1.76l4.09-.87V5.2h3.27v3.37h-3.27v6.9zm-14.73 5.43c-3.47 0-5.86-1.48-6.77-3.88l3.92-1.73c.49 1.35 1.57 2.05 2.87 2.05 1.16 0 1.83-.52 1.83-1.29 0-2.12-8.06-.91-8.06-6.55 0-3.12 2.51-5.18 6.08-5.18 2.85 0 5.07 1.32 6.24 3.46l-3.77 1.73c-.45-.97-1.26-1.73-2.6-1.73-.88 0-1.62.44-1.62 1.2 0 2.14 8.08.68 8.08 6.69 0 3.15-2.4 5.23-6.2 5.23z" />
+      <svg viewBox="0 0 80 30" fill="currentColor" className="w-16 h-6">
+        <path d="M22.9 16.3c-.7.4-1.6.6-2.6.6-2 0-3.1-1.1-3.1-3.2V9.6h-1.3V8.3h1.3V6.1h1.6v2.2h2.4v1.3h-2.4v3.8c0 1.3.6 1.9 1.7 1.9.5 0 1-.1 1.4-.4v1.4zm5.6.6c-2.5 0-4.1-1.7-4.1-4.4s1.6-4.4 4.1-4.4c2.5 0 4.1 1.7 4.1 4.4s-1.6 4.4-4.1 4.4zm0-1.4c1.5 0 2.5-1.2 2.5-3s-1-3-2.5-3-2.5 1.2-2.5 3 1 3 2.5 3zm11.5 1.2l-3.2-8.6h1.7l2.3 6.7 2.3-6.7h1.7l-3.2 8.6h-1.6z" />
+        <path d="M10 20.5c-5.5-4.1-8.3-9.8-7.5-16.1C3.3.8 7.2-1.3 10.9.8c1.2.7 2.2 1.7 3.1 2.8.5.6.4 1.5-.2 2-.6.5-1.5.4-2-.2-.7-.8-1.5-1.5-2.4-2.1-1.7-1-3.4 0-3.8 2.3-.6 4.7 1.7 9.2 6.1 12.5.6.5.7 1.4.2 2-.5.6-1.4.7-1.9.4z" />
+        <path d="M15.1 24.5c-1.6 0-2.9-.3-3.9-.8-.7-.4-.9-1.3-.5-2s1.3-.9 2-.5c.6.3 1.4.5 2.4.5 3.5 0 6.4-2.4 7.2-5.8.2-.8 1-1.2 1.8-1 .8.2 1.2 1 1 1.8-1.1 4.6-5.1 7.8-10 7.8z" />
       </svg>
     ),
   },
@@ -282,7 +284,7 @@ const CLIENT_LOGOS: { name: string; svg: React.ReactNode }[] = [
 export function ClientsMarquee() {
   return (
     <section className="py-12 border-y border-gray-100 overflow-hidden bg-gray-50/50">
-      <div className="container mx-auto px-6 md:px-12 mb-8">
+      <div className="container mx-auto px-8 md:px-16 lg:px-28 xl:px-36 mb-8">
         <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-gray-300">
           Trusted by teams at
         </p>

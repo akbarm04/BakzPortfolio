@@ -1,56 +1,56 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, MonitorPlay, Paintbrush, PenTool, Layers, Zap } from "lucide-react";
+import { Code2, Database, BrainCircuit, Globe, GitMerge, BarChart3 } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: MonitorPlay,
-    title: "Web Design",
+    icon: Globe,
+    title: "Web Development",
     number: "01",
     description:
-      "Creating digital experiences that are intuitive, engaging, and memorable. Focused on visual hierarchy and smooth interaction.",
+      "Building fast, responsive, and accessible web applications from scratch — frontend to backend, end to end.",
+  },
+  {
+    icon: Database,
+    title: "Backend & APIs",
+    number: "02",
+    description:
+      "Designing and building RESTful APIs, database schemas, and server-side logic that is clean and scalable.",
+  },
+  {
+    icon: BarChart3,
+    title: "Data Analysis",
+    number: "03",
+    description:
+      "Exploring datasets, finding patterns, and turning raw numbers into clear, actionable insights with Python.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "Machine Learning",
+    number: "04",
+    description:
+      "Building and experimenting with ML models — from data preparation to training, evaluation, and deployment.",
   },
   {
     icon: Code2,
-    title: "Development",
-    number: "02",
-    description:
-      "Translating designs into pixel-perfect, performant, and accessible code using modern frontend technologies.",
-  },
-  {
-    icon: Paintbrush,
-    title: "Brand Identity",
-    number: "03",
-    description:
-      "Building cohesive visual systems that communicate your values and distinguish you from the competition.",
-  },
-  {
-    icon: PenTool,
-    title: "UI/UX Design",
-    number: "04",
-    description:
-      "Designing systematic interfaces and user flows that prioritize usability without sacrificing aesthetic quality.",
-  },
-  {
-    icon: Layers,
-    title: "Motion Design",
+    title: "Code Review",
     number: "05",
     description:
-      "Bringing interfaces to life with purposeful motion — transitions, micro-interactions, and scroll experiences.",
+      "Reviewing codebases for quality, performance, and maintainability. Sharing feedback that actually helps.",
   },
   {
-    icon: Zap,
-    title: "Creative Direction",
+    icon: GitMerge,
+    title: "Technical Consulting",
     number: "06",
     description:
-      "Shaping visual strategy and creative vision across campaigns, digital products, and brand touchpoints.",
+      "Helping teams pick the right tools, architect solutions, and make technical decisions with confidence.",
   },
 ];
 
 export function Services() {
   return (
     <section id="services" className="py-24 md:py-32 bg-white">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-8 md:px-16 lg:px-28 xl:px-36">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

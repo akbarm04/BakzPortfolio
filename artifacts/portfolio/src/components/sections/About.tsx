@@ -5,7 +5,7 @@ import profilePhoto from "@assets/pas_foto_ai_1776398601704.png";
 export function About() {
   return (
     <section id="about" className="py-24 md:py-32 bg-white">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-8 md:px-16 lg:px-28 xl:px-36">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export function About() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
-          {/* Left: tilted photo card — like the reference */}
+          {/* Left: tilted photo card */}
           <motion.div
             initial={{ opacity: 0, rotate: -6, y: 20 }}
             whileInView={{ opacity: 1, rotate: -4, y: 0 }}
@@ -32,7 +32,7 @@ export function About() {
             whileHover={{ rotate: -1, scale: 1.02 }}
             className="relative flex justify-center"
           >
-            {/* Shadow card behind (gives layered depth) */}
+            {/* Shadow card behind */}
             <div
               className="absolute inset-0 rounded-[2rem] bg-gray-100 border border-gray-200 shadow-lg"
               style={{ transform: "rotate(3deg) translateX(10px) translateY(6px)" }}
@@ -40,7 +40,7 @@ export function About() {
 
             {/* Main photo card */}
             <div className="relative w-full max-w-[360px] bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
-              {/* Top bar — like a card header */}
+              {/* Top bar */}
               <div className="flex items-center gap-2 px-5 py-4 border-b border-gray-100">
                 <span className="w-2.5 h-2.5 rounded-full bg-gray-200" />
                 <span className="w-2.5 h-2.5 rounded-full bg-gray-200" />
@@ -60,7 +60,7 @@ export function About() {
               {/* Name tag at bottom */}
               <div className="px-5 py-4 border-t border-gray-100">
                 <p className="text-xs font-mono text-gray-400 uppercase tracking-widest">
-                  Creative Developer & Designer
+                  Developer & Data Science Learner
                 </p>
               </div>
             </div>
@@ -74,17 +74,18 @@ export function About() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
             <p className="text-xl md:text-2xl leading-relaxed text-gray-700 mb-12">
-              A multidisciplinary designer and developer crafting digital
-              experiences that live at the intersection of art and technology.
-              With a focus on clarity, motion, and intentional detail.
+              A developer who loves building things on the web — from clean
+              frontends to solid backends. Currently diving into data science and
+              machine learning, turning curiosity into real projects one commit
+              at a time.
             </p>
 
             <div className="grid grid-cols-2 gap-8 border-t border-gray-100 pt-10">
               {[
-                { value: "5+", label: "Years Experience" },
-                { value: "50+", label: "Projects Delivered" },
-                { value: "12", label: "Awards Won" },
-                { value: "100%", label: "Client Satisfaction" },
+                { value: "3+", label: "Years Coding" },
+                { value: "30+", label: "Projects Shipped" },
+                { value: "∞", label: "Bugs Fixed" },
+                { value: "100%", label: "Still Learning" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
