@@ -55,9 +55,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[clamp(3.5rem,10vw,8rem)] font-bold leading-[0.88] tracking-tighter mb-8"
             >
-              ALEX
+              AKBAR
               <br />
-              <span className="text-gray-300">RIVERA</span>
+              <span className="text-gray-300">MAULANA</span>
             </motion.h1>
 
             <motion.p
@@ -112,7 +112,7 @@ export function Hero() {
               <div className="relative z-10 w-[280px] h-[380px] md:w-[320px] md:h-[430px] rounded-[2rem] overflow-hidden shadow-2xl bg-gray-100">
                 <img
                   src={profilePhoto}
-                  alt="Alex Rivera"
+                  alt="Akbar Maulana"
                   className="w-full h-full object-cover grayscale"
                   style={{ objectPosition: "50% 42%" }}
                 />

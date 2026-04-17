@@ -51,7 +51,7 @@ export function Navbar() {
               onClick={() => scrollToSection("hero")}
               className="text-sm font-bold tracking-[0.2em] uppercase font-mono"
             >
-              Alex Rivera
+              Akbar Maulana
             </button>
 
             <div className="hidden md:flex items-center gap-6 text-xs font-mono tracking-widest uppercase">

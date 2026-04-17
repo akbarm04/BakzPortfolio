@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const EXPERIENCES = [
   {
-    role: "Full-Stack Developer",
-    company: "Freelance",
-    type: "Self-employed",
-    period: "2022 — Present",
+    role: "Data Scientist",
+    company: "Coding Camp Powered by DBS Foundation",
+    type: "Cohort Student",
+    period: "2026 — Present",
     current: true,
     highlights: [
       "Build and ship web applications for clients across various industries.",
@@ -15,10 +15,18 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Junior Web Developer",
-    company: "Tech Startup",
-    type: "Full-time",
-    period: "2021 — 2022",
+    role: "Software Engineering",
+    company: "Universitas Pendidikan Indonesia",
+    type: "Bachelor's Degree",
+    period: "2025 — Present",
+    current: false,
+    highlights: [],
+  },
+  {
+    role: "Front-End & Back-End",
+    company: "Coding Camp Powered by DBS Foundation",
+    type: "Cohort Student",
+    period: "2025 Jan — 2025 May",
     current: false,
     highlights: [
       "Developed and maintained frontend features using React and Tailwind CSS.",
@@ -27,24 +35,16 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Data Science Learner",
-    company: "Self-Study",
-    type: "Ongoing",
-    period: "2023 — Present",
+    role: "Informatics Applications",
+    company: "DISKOMINFO KARAWANG",
+    type: "Internship",
+    period: "2024 Jul — 2024 Sept",
     current: false,
     highlights: [
       "Learning Python fundamentals and data manipulation with Pandas and NumPy.",
       "Exploring machine learning concepts with TensorFlow and scikit-learn.",
       "Working through real-world datasets and building end-to-end ML pipelines.",
     ],
-  },
-  {
-    role: "Computer Science",
-    company: "University",
-    type: "Bachelor's Degree",
-    period: "2019 — 2023",
-    current: false,
-    highlights: [],
   },
 ];
 
