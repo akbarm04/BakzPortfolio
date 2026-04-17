@@ -52,8 +52,8 @@ export function About() {
                 <img
                   src={profilePhoto}
                   alt="Profile photo"
-                  className="w-full h-full object-cover object-top grayscale"
-                  style={{ objectPosition: "50% 10%" }}
+                  className="w-full h-full object-cover grayscale"
+                  style={{ objectPosition: "50% 42%" }}
                 />
               </div>
 

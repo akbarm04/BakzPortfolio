@@ -66,8 +66,8 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="text-base md:text-lg font-mono text-gray-500 max-w-sm mb-12 leading-relaxed"
             >
-              Creative Developer & Designer crafting digital experiences at the
-              intersection of art and technology.
+              Full-Stack Developer &amp; aspiring Data Scientist,
+              building useful things with code — and learning ML along the way.
             </motion.p>
 
             <motion.div
@@ -113,8 +113,8 @@ export function Hero() {
                 <img
                   src={profilePhoto}
                   alt="Alex Rivera"
-                  className="w-full h-full object-cover object-top grayscale"
-                  style={{ objectPosition: "50% 15%" }}
+                  className="w-full h-full object-cover grayscale"
+                  style={{ objectPosition: "50% 42%" }}
                 />
                 {/* subtle dark gradient at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
