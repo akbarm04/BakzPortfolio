@@ -11,7 +11,7 @@ import { ToolsMarquee, ClientsMarquee } from "@/components/ToolsMarquee";
 
 export default function Home() {
   return (
-    <div className="bg-white min-h-screen text-black selection:bg-black selection:text-white">
+    <div className="bg-white min-h-screen text-black selection:bg-black selection:text-white overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
