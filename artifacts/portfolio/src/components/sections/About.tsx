@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePhoto from "@assets/pas_foto_ai_1776398601704.png";
+const profilePhoto = "/photo.png";
 
 export function About() {
   return (

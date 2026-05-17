@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
-import profilePhoto from "@assets/pas_foto_ai_1776398601704.png";
+const profilePhoto = "/photo.png";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
