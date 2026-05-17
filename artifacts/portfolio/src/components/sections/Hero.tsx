@@ -47,7 +47,6 @@ export function Hero() {
 
         {/* Main grid — on mobile: photo first, text second */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
-
           {/* Photo — order-1 on mobile (shows first), order-2 on lg */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -74,7 +73,11 @@ export function Hero() {
               {/* Floating badge */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute -bottom-5 -left-4 md:-bottom-6 md:-left-6 bg-black text-white rounded-2xl px-3 py-2 md:px-4 md:py-3 text-xs font-mono shadow-xl z-20"
               >
                 <p className="text-gray-400 text-[9px] md:text-[10px] uppercase tracking-widest mb-0.5">
@@ -90,28 +93,40 @@ export function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="text-[clamp(3rem,12vw,8rem)] font-bold leading-[0.88] tracking-tighter mb-6 md:mb-8"
             >
-              ALEX
+              AKBAR
               <br />
-              <span className="text-gray-300">RIVERA</span>
+              <span className="text-gray-300">MAULANA</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="text-sm md:text-lg font-mono text-gray-500 max-w-sm mb-8 md:mb-12 leading-relaxed"
             >
-              Full-Stack Developer &amp; aspiring Data Scientist,
-              building useful things with code — and learning ML along the way.
+              Full-Stack Developer &amp; aspiring Data Scientist, building
+              useful things with code — and learning ML along the way.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.42,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="flex flex-col sm:flex-row gap-3 md:gap-4"
             >
               <button
