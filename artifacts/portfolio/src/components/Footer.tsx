@@ -1,6 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Twitter, Youtube, Mail, MapPin } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Twitter,
+  Youtube,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 const EMAIL = "hello@alexrivera.co";
 
@@ -49,7 +57,9 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             className="md:col-span-5"
           >
-            <h3 className="text-2xl font-bold tracking-tighter mb-2">Alex Rivera</h3>
+            <h3 className="text-2xl font-bold tracking-tighter mb-2">
+              Akbar Maulana
+            </h3>
             <p className="text-white/50 text-sm font-mono leading-relaxed mb-8 max-w-xs">
               A developer exploring data science and ML. Building digital
               experiences and sharing the journey.
@@ -59,7 +69,7 @@ export function Footer() {
             <div className="flex flex-col gap-3 mb-8 text-sm font-mono">
               <div className="flex items-center gap-3 text-white/50">
                 <MapPin size={14} className="shrink-0" />
-                <span>San Francisco, CA &bull; Remote Friendly</span>
+                <span>Bandung, West Java &bull; Remote Friendly</span>
               </div>
               <div className="flex items-center gap-3 text-white/50">
                 <Mail size={14} className="shrink-0" />
@@ -155,7 +165,9 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono text-white/30">
-          <p>© {new Date().getFullYear()} Alex Rivera. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Akbar Maulana. All rights reserved.
+          </p>
           <div className="flex items-center gap-6">
             <span className="hover:text-white/60 cursor-pointer transition-colors">
               Privacy Policy

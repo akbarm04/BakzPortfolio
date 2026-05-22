@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, X, Send } from "lucide-react";
 
-const EMAIL = "hello@alexrivera.co";
+const EMAIL = "akbarmlnaa04@gmail.com";
 
 function ContactModal({ onClose }: { onClose: () => void }) {
   const [name, setName] = React.useState("");
@@ -12,7 +12,9 @@ function ContactModal({ onClose }: { onClose: () => void }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`,
+    );
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     onClose();
   };
@@ -51,7 +53,8 @@ function ContactModal({ onClose }: { onClose: () => void }) {
 
         <h3 className="text-white text-xl font-bold mb-1">Send a message</h3>
         <p className="text-white/40 text-sm font-mono mb-7 leading-relaxed">
-          Fill in the form and your default email app will open with everything pre-filled.
+          Fill in the form and your default email app will open with everything
+          pre-filled.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
