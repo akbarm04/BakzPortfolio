@@ -7,7 +7,7 @@ const EXPERIENCES = [
     company: "Universitas Pendidikan Indonesia",
     type: "Bachelor's Degree",
     period: "2025 — Present",
-    current: false,
+    current: true,
     highlights: [],
   },
   {
@@ -15,7 +15,7 @@ const EXPERIENCES = [
     company: "Coding Camp Powered by DBS Foundation",
     type: "Cohort Student",
     period: "2026 Feb — 2026 Jun",
-    current: true,
+    current: false,
     highlights: [
       "Build and ship web applications for clients across various industries.",
       "Specialize in React, TypeScript, and Node.js ecosystems.",
