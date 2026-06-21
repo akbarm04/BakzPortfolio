@@ -3,24 +3,24 @@ import { motion } from "framer-motion";
 
 const EXPERIENCES = [
   {
-    role: "Data Scientist",
-    company: "Coding Camp Powered by DBS Foundation",
-    type: "Cohort Student",
-    period: "2026 — Present",
-    current: true,
-    highlights: [
-      "Build and ship web applications for clients across various industries.",
-      "Specialize in React, TypeScript, and Node.js ecosystems.",
-      "Currently expanding into data science and machine learning with Python.",
-    ],
-  },
-  {
     role: "Software Engineering",
     company: "Universitas Pendidikan Indonesia",
     type: "Bachelor's Degree",
     period: "2025 — Present",
     current: false,
     highlights: [],
+  },
+  {
+    role: "Data Scientist",
+    company: "Coding Camp Powered by DBS Foundation",
+    type: "Cohort Student",
+    period: "2026 Feb — 2026 Jun",
+    current: true,
+    highlights: [
+      "Build and ship web applications for clients across various industries.",
+      "Specialize in React, TypeScript, and Node.js ecosystems.",
+      "Currently expanding into data science and machine learning with Python.",
+    ],
   },
   {
     role: "Front-End & Back-End",
