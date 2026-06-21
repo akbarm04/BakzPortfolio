@@ -31,9 +31,9 @@ const SERVICES_LIST = [
 ];
 
 const SOCIALS = [
-  { Icon: Github, label: "GitHub", href: "https://github.com" },
-  { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { Icon: Instagram, label: "Instagram", href: "https://instagram.com" },
+  { Icon: Github, label: "GitHub", href: "https://github.com/akbarm04" },
+  { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/akbar-maulana1411" },
+  { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/akbrmlnaa04/" },
   { Icon: Twitter, label: "Twitter", href: "https://twitter.com" },
   { Icon: Youtube, label: "YouTube", href: "https://youtube.com" },
 ];
