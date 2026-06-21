@@ -10,7 +10,7 @@ import {
   MapPin,
 } from "lucide-react";
 
-const EMAIL = "hello@alexrivera.co";
+const EMAIL = "akbarmlnaa04@gmail.com";
 
 const QUICK_LINKS = [
   { label: "Home", id: "hero" },
