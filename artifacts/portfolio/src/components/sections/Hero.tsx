@@ -41,7 +41,7 @@ export function Hero() {
             </span>
           </div>
           <span className="hidden md:block text-xs font-mono text-gray-300 tracking-widest">
-            Portfolio — 2025
+            Portfolio — 2026
           </span>
         </motion.div>
 
